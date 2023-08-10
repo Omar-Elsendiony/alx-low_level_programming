@@ -1,0 +1,3 @@
+#!/bin/bash
+gcc -c "$CFILE" `(echo "$CFILE" | cut -f 1 -d ".")`.o
+
