@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc  "$CFILE" `(echo "$CFILE" | cut -f 3 -d ".")`.o -c
+gcc  "$CFILE" -c
