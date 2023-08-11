@@ -14,10 +14,9 @@ int main(void)
 	int l;
 	int newNumber;
 	int testNumber;
-	int n = 400000;
-	int arr[n];
+	int arr[40000];
 
-    for (int i =0 ; i < n;i++)
+    for (i =0 ; i < 40000;i++)
         arr[i] = 0;
 	for (i = 48; i <= 57; i++)
 	{
