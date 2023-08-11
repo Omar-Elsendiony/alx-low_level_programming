@@ -16,7 +16,7 @@ int main(void)
 	int testNumber;
 	int arr[40000];
 
-    for (i =0 ; i < 40000;i++)
+    for (i = 0 ; i < 40000;i++)
         arr[i] = 0;
 	for (i = 48; i <= 57; i++)
 	{
