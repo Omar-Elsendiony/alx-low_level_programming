@@ -16,8 +16,10 @@ int main(void)
 	int testNumber;
 	int arr[40000];
 
-    for (i = 0; i < 40000;i++)
-        arr[i] = 0;
+	for (i = 0; i < 40000;i++)
+	{
+		arr[i] = 0;
+	}
 	for (i = 48; i <= 57; i++)
 	{
 		for (j = 48; j <= 57; j++)
@@ -31,7 +33,7 @@ int main(void)
 						continue;
 					}
 					if (i==k && j==l)
-					    continue;
+						continue;
 					newNumber =  (l-48)*1 + (k-48)*10 + (j-48) * 100 + (i-48) *1000;
 					arr[newNumber] = 1;
 					putchar(i);
