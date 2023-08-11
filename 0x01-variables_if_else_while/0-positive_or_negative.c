@@ -4,7 +4,7 @@
 #include <stdio.h>
 /* betty style doc for function main goes there */
 /**
- * main : starting point
+ * main - starting point
  * Description: The description
  * Return: 0
 */
@@ -17,11 +17,11 @@ int main(void)
 	/* your code goes there */
 	if (n > 0)
 	{
-		printf("%i is positive",n);
+		printf("%i is positive", n);
 	}
 	else if (n < 0)
 	{
-		printf("%i is negative",n);
+		printf("%i is negative", n);
 	}
 	else
 	{
