@@ -1,5 +1,4 @@
 #include <stdio.h>
-/* betty style doc for function main goes there */
 /**
  * main - starting point
  * Description: The description
@@ -7,10 +6,10 @@
 */
 int main(void)
 {
-    int i;
+	int i;
 	for (i = 97; i <= 122;i++){
-        putchar(i);
-    }
-    putchar('\n');
-    return (0);
+		putchar(i);
+	}
+	putchar('\n');
+	return (0);
 }
