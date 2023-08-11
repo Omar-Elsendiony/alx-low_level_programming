@@ -29,10 +29,9 @@ int main(void)
 				for (l = 48; l <= 57; l++)
 				{
 					testNumber = (j - 48)*1 + (i - 48) * 10 + (l - 48) * 100 + (k - 48) * 1000;
-					if (arr[testNumber] == 1){
+					if (arr[testNumber] == 1)
 						continue;
-					}
-					if (i==k && j==l)
+					if (i == k && j == l)
 						continue;
 					newNumber =  (l - 48) * 1 + (k - 48) * 10 + (j - 48) * 100 + (i - 48) *1000;
 					arr[newNumber] = 1;
