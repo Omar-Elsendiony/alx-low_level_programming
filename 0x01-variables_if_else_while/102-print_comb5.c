@@ -8,7 +8,7 @@
 */
 int main(void)
 {
-	int i, j, k, l, newNumber, testNumber, diff1, diff2;
+	int i, j, k, l, newNumber, testNumber;
 	int arr[40000];
 
 	for (i = 0; i < 40000; i++)
