@@ -20,7 +20,7 @@ void times_table(void)
 				_putchar(product / 10 + '0');
 				_putchar(product % 10 + '0');
 			}
-			else if (product != 0)
+			else if (j != 0)
 			{
 				_putchar(' ');
 				_putchar(product + '0');
