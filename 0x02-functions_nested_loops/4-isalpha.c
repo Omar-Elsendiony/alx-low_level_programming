@@ -1,14 +1,14 @@
 #include "main.h"
 
 /**
- * _islower - returns the alphabet
+ * _isalpha - returns the alphabet
  * @c: input
  * Description: The description
  * Return: 0
 */
-int _islower(int c)
+int _isalpha(int c)
 {
-	if (c >= 97 && c <= 122)
+	if ((c >= 97 && c <= 122) || (c >= 97 && c <= 122))
 		return (1);
 	return (0);
 }
