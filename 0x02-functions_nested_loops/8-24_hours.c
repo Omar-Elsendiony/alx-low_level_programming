@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
- * _abs - returns the absolute
- * @c: input
+ * jack_bauer - returns the timing ticking
+ *
  * Description: The description
  * Return: 0
 */
