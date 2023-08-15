@@ -5,10 +5,9 @@
  * Description: The description
  * Return: 0
 */
-int main(void)
-{
-	int i, length;
-
+void print_alphabet(void){
+    int i;
+    
 	for (i = 65; i < 90; i++)
 		_putchar(i);
 	_putchar('\n');
