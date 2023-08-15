@@ -20,7 +20,7 @@ void jack_bauer(void)
 			if (tens == 0)
 			{
 				_putchar('0');
-				_putchar(i + '0');
+				_putchar(units + '0');
 			}
 			else
 			{
