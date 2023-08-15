@@ -16,26 +16,27 @@ void jack_bauer(void)
 		while (j < 60)
 		{
 			units = i % 10;
-			if (units == 0)
+			tens = i / 10;
+			if (tens == 0)
 			{
 				_putchar('0');
 				_putchar(i + '0');
 			}
 			else
 			{
-				tens = i / 10;
 				_putchar(tens + '0');
 				_putchar(units + '0');
 			}
+			_putchar(':');
 			units = j % 10;
-			if (j % 10 == 0)
+			tens = i / 10;
+			if (tens == 0)
 			{
 				_putchar('0');
 				_putchar(i + '0');
 			}
 			else
 			{
-				tens = j / 10;
 				_putchar(tens + '0');
 				_putchar(units + '0');
 			}
