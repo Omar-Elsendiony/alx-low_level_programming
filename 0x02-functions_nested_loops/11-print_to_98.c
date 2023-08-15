@@ -8,14 +8,9 @@
 */
 void print_to_98(int n)
 {
-	int units, tens;
-
 	while (n != 98)
 	{
-		tens = n / 10;
-		units = n % 10;
-		printf("%d",n);
-		
+		printf("%d", n);		
 		_putchar(',');
 		_putchar(' ');
 		if (n > 98)
