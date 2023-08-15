@@ -10,6 +10,6 @@ int _abs(int c)
 {
 	int res;
 
-	res = (c > 0) ? 0 : -c;
+	res = (c > 0) ? c : -c;
 	return (res);
 }
