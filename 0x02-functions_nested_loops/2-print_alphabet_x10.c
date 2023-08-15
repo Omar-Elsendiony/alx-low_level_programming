@@ -7,12 +7,10 @@
 */
 int main(void)
 {
-	char *stringName = "_putchar";
 	int i, length;
 
-	length = strlen(stringName);
-	for (i = 0; i < length; i++)
-		_putchar(stringName[i]);
+	for (i = 65; i < 90; i++)
+		_putchar(i);
 	_putchar('\n');
 	return (0);
 }
