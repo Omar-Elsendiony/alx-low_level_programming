@@ -29,7 +29,7 @@ void jack_bauer(void)
 			}
 			_putchar(':');
 			units = j % 10;
-			tens = i / 10;
+			tens = j / 10;
 			if (tens == 0)
 			{
 				_putchar('0');
