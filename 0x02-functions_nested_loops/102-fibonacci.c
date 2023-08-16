@@ -11,7 +11,7 @@ int main(void)
 	firstNum = 1;
 	secondNum = 2;
 	printf("1, 2");
-	for (i = 0; i < 50; i++)
+	for (i = 0; i < 48; i++)
 	{
 		printf(", ");
 		temp = firstNum + secondNum;
