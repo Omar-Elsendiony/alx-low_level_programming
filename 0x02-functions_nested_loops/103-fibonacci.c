@@ -6,19 +6,20 @@
 */
 int main(void)
 {
-	int i, firstNum, secondNum, temp;
+	int firstNum, secondNum, temp, sum;
 
 	firstNum = 1;
 	secondNum = 2;
-	printf("1, 2");
-	for (i = 0; i < 50; i++)
+	while (1)
 	{
-		printf(", ");
 		temp = firstNum + secondNum;
+		if (temp > 4000000)
+			break;
+		if (temp % 2 == 0)
+			sum = sum + temp;
 		firstNum = secondNum;
 		secondNum = temp;
-		printf("%d", temp);
 	}
-	printf("\n");
+	printf("%d\n", sum);
 	return (0);
 }
