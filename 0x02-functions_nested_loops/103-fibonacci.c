@@ -21,6 +21,6 @@ int main(void)
 		firstNum = secondNum;
 		secondNum = temp;
 	}
-	printf("%d\n", sum);
+	printf("%ld\n", sum);
 	return (0);
 }
