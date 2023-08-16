@@ -1,20 +1,24 @@
-#include "main.h"
 #include <stdio.h>
 /**
- * print_to_98 - returns the time table
- * @n: parameter
+ * main - returns the time table
  * Description: The description
  * Return: 0
 */
-void print_to_98(int n)
+int main(void)
 {
-	while (n != 98)
+	long int i, firstNum, secondNum, temp;
+
+	firstNum = 1;
+	secondNum = 2;
+	printf("1, 2");
+	for (i = 0; i < 96; i++)
 	{
-		printf("%d, ", n);
-		if (n > 98)
-			n = n - 1;
-		else
-			n = n + 1;
+		printf(", ");
+		temp = firstNum + secondNum;
+		firstNum = secondNum;
+		secondNum = temp;
+		printf("%ld", temp);
 	}
-	puts("98");
+	printf("\n");
+	return (0);
 }
