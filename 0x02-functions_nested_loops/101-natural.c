@@ -1,11 +1,22 @@
 #include "main.h"
 
 /**
- * natural - returns the time table
+ * main - returns the time table
  * Description: The description
  * Return: 0
 */
-void natural(void)
+int main(void)
 {
-	int i, j, product;
+	int i, sum;
+
+	sum = 0;
+	for (i = 3; i < 1024; i++)
+	{
+		if (i % 3 == 0 || i % 5 == 0)
+		{
+			sum = sum + i;
+		}
+	}
+	printf("%d", sum);
+	return (0);
 }
