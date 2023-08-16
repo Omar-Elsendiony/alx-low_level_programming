@@ -14,26 +14,29 @@ void print_times_table(int n)
 		return;
 	for (i = 0; i <= n; i++)
 	{
-		for (j = 0; j <= n; j++)
+		_putchar('0');
+		_putchar(',');
+		_putchar(' ');
+		for (j = 1; j <= n; j++)
 		{
 			product = i * j;
-			if (j != 0)
+			if (product > 9 && product < 100)
 			{
-				if (product > 9 && product < 100)
-				{
-					_putchar(product / 10 + '0');
-					_putchar(product % 10 + '0');
-				}
-				else if (product >= 100 && product < 999)
-				{
-					_putchar(product / 100 + '0');
-					_putchar((product % 100) / 10 + '0');
-					_putchar(product % 10 + '0');
-				}
+				_putchar(' ');
+				_putchar(product / 10 + '0');
+				_putchar(product % 10 + '0');
+			}
+			else if (product >= 100 && product < 999)
+			{
+				_putchar(product / 100 + '0');
+				_putchar((product % 100) / 10 + '0');
+				_putchar(product % 10 + '0');
 			}
 			else
 			{
-				_putchar('0');
+				_putchar(' ');
+				_putchar(' ');
+				_putchar(product);
 			}
 			if (j != n)
 			{
