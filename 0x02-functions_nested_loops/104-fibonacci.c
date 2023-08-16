@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdint.h>
 /**
  * main - returns the time table
  * Description: The description
@@ -6,7 +7,7 @@
 */
 int main(void)
 {
-	unsigned long i, firstNum, secondNum, temp;
+	int64_t i, firstNum, secondNum, temp;
 
 	firstNum = 1;
 	secondNum = 2;
