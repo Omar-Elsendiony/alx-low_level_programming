@@ -6,7 +6,7 @@
 */
 int main(void)
 {
-	int i, firstNum, secondNum, temp;
+	long int i, firstNum, secondNum, temp;
 
 	firstNum = 1;
 	secondNum = 2;

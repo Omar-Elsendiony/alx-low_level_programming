@@ -6,10 +6,11 @@
 */
 int main(void)
 {
-	int firstNum, secondNum, temp, sum;
+	long int firstNum, secondNum, temp, sum;
 
 	firstNum = 1;
 	secondNum = 2;
+	sum = 2;
 	while (1)
 	{
 		temp = firstNum + secondNum;
