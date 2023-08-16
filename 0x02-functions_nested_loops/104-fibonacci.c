@@ -6,7 +6,7 @@
 */
 int main(void)
 {
-	unsigned long long i, firstNum, secondNum, temp;
+	unsigned long i, firstNum, secondNum, temp;
 
 	firstNum = 1;
 	secondNum = 2;
@@ -17,7 +17,7 @@ int main(void)
 		temp = firstNum + secondNum;
 		firstNum = secondNum;
 		secondNum = temp;
-		printf("%lld", temp);
+		printf("%ld", temp);
 	}
 	printf("\n");
 	return (0);
