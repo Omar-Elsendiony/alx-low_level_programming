@@ -1,5 +1,4 @@
-#include "main.h"
-
+#include <stdio.h>
 /**
  * main - returns the time table
  * Description: The description
