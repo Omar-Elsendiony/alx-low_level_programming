@@ -17,7 +17,7 @@ int main(void)
 		temp = firstNum + secondNum;
 		firstNum = secondNum;
 		secondNum = temp;
-		printf("%ld", temp);
+		printf("%lld", temp);
 	}
 	printf("\n");
 	return (0);
