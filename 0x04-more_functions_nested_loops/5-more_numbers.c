@@ -1,5 +1,4 @@
 #include "main.h"
-#include "string.h"
 /**
  * more_numbers - returns the alphabet
  * Description: The description
