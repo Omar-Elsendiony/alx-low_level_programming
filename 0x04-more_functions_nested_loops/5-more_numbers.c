@@ -5,7 +5,7 @@
  * Description: The description
  * Return: 0
 */
-void print_most_numbers(void)
+void more_numbers(void)
 {
 	int i, number;
 
