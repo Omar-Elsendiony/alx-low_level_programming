@@ -40,7 +40,7 @@ void print_number(int n)
 	int size, tempNumber, numberToPrint;
 
 	if (n < 0)
-		_putchar('-');
+		_putchar(45);
 	size = 0;
 	tempNumber = n;
 	while (tempNumber != 0)
@@ -52,7 +52,7 @@ void print_number(int n)
 	{
 		numberToPrint = absolute(n % power10(size)) / absolute(power10((size - 1)));
 		size = size - 1;
-		_putchar(numberToPrint + '0');
+		_putchar(numberToPrint + 48);
 	}
-	_putchar(absolute(n % 10) + '0');
+	_putchar(absolute(n % 10) + 48);
 }
