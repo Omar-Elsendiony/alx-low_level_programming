@@ -8,7 +8,7 @@
 */
 void print_number(int n)
 {
-	int i, size, tempNumber, numberToPrint, result1, result2;
+	unsigned int i, size, tempNumber, numberToPrint, result1, result2;
 
 	if (n < 0)
 	{
