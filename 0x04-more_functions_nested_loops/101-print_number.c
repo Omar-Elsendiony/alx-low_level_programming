@@ -1,5 +1,5 @@
 #include "main.h"
-#include <math.h>
+#include <stdlib.h>
 
 /**
  * power10 - returns the alphabet
@@ -28,6 +28,8 @@ void print_number(int n)
 {
 	int size, tempNumber, numberToPrint;
 
+	if (n < 0)
+		_putchar('-');
 	size = 0;
 	tempNumber = n;
 	while (tempNumber != 0)
@@ -37,9 +39,9 @@ void print_number(int n)
 	}
 	while (size > 1)
 	{
-		numberToPrint = (n % power10(size)) / power10((size - 1));
+		numberToPrint = abs(n % power10(size)) / abs(power10((size - 1)));
 		size = size - 1;
 		_putchar(numberToPrint + '0');
 	}
-	_putchar(n % 10 + '0');
+	_putchar(abs(n % 10) + '0');
 }
