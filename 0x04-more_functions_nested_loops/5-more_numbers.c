@@ -1,9 +1,9 @@
 #include "main.h"
 #include "string.h"
 /**
- * print_most_numbers - returns the alphabet
+ * more_numbers - returns the alphabet
  * Description: The description
- * Return: 0
+ * Return: none
 */
 void more_numbers(void)
 {
