@@ -6,7 +6,7 @@
 */
 int main(void)
 {
-	long int i, firstNum, secondNum, temp;
+	int i;
 
 	printf("1 2");
 	for (i = 1; i < 101; i++)
