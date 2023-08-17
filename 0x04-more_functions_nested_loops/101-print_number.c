@@ -1,18 +1,6 @@
 #include "main.h"
 
 /**
- * absolute - returns the alphabet
- * @n: the number of rimes to print '\'
- * Description: The description
- * Return: 0
-*/
-int absolute(int n)
-{
-	if (n < 0)
-		return (-n);
-	return (n);
-}
-/**
  * power10 - returns the alphabet
  * @exponent: the number of rimes to print '\'
  * Description: The description
@@ -40,7 +28,10 @@ void print_number(int n)
 	int size, tempNumber, numberToPrint;
 
 	if (n < 0)
+	{
 		_putchar(45);
+		n = -n;
+	}
 	size = 0;
 	tempNumber = n;
 	while (tempNumber != 0)
@@ -50,9 +41,9 @@ void print_number(int n)
 	}
 	while (size > 1)
 	{
-		numberToPrint = absolute(n % power10(size)) / absolute(power10((size - 1)));
+		numberToPrint = (n % power10(size)) / (power10((size - 1)));
 		size = size - 1;
 		_putchar(numberToPrint + 48);
 	}
-	_putchar(absolute(n % 10) + 48);
+	_putchar((n % 10) + 48);
 }
