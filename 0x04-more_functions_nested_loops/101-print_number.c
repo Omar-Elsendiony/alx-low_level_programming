@@ -1,6 +1,35 @@
 #include "main.h"
 
 /**
+ * absolute - returns the alphabet
+ * @n: the number of rimes to print '\'
+ * Description: The description
+ * Return: 0
+*/
+int absolute(int n)
+{
+	if (n < 0)
+		return (-n);
+	return (n);
+}
+/**
+ * power10 - returns the alphabet
+ * @exponent: the number of rimes to print '\'
+ * Description: The description
+ * Return: 0
+*/
+int power10(int exponent)
+{
+	int i, result;
+
+	result = 1;
+	for (i = 0; i < exponent; i++)
+	{
+		result = result * 10;
+	}
+	return (result);
+}
+/**
  * print_number - returns the alphabet
  * @n: the number of rimes to print '\'
  * Description: The description
@@ -8,12 +37,12 @@
 */
 void print_number(int n)
 {
-	unsigned int i, size, tempNumber, numberToPrint, result1, result2;
+	unsigned int size, tempNumber, numberToPrint;
 
 	if (n < 0)
 	{
 		_putchar(45);
-		n *= -1;
+		n = -n;
 	}
 	size = 0;
 	tempNumber = n;
@@ -24,14 +53,7 @@ void print_number(int n)
 	}
 	while (size > 1)
 	{
-		result1 = 1;
-		result2 = 1;
-		for (i = 0; i < size - 1; i++)
-		{
-			result2 = result2 * 10;
-		}
-		result1 = result2 * 10;
-		numberToPrint = (n % result1) / (result2);
+		numberToPrint = (n % power10(size)) / (power10((size - 1)));
 		size = size - 1;
 		_putchar(numberToPrint + 48);
 	}
