@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
- * puts_half - returns the alphabet
+ * puts2 - returns the alphabet
  * @str: pointer to the start of string
  * Description: The description
  * Return: void
 */
-void puts_half(char *str)
+void puts2(char *str)
 {
 	int i, length;
 
