@@ -25,6 +25,10 @@ int _atoi(char *s)
 			countNegatives += 1;
 		i += 1;
 	}
+	if (s[i] == '\0')
+	{
+		return (0);
+	}
 	while (s[i] >= '0' && s[i] <= '9' && s[i] != '\0')
 	{
 		end = i;
