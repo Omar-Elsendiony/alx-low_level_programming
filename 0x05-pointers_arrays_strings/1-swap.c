@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * reset_to_98 - returns the alphabet
+ * swap_int - returns the alphabet
  * @a: pointer to integer
  * @b: pointer to second number
  * Description: The description
@@ -9,10 +9,10 @@
 */
 void swap_int(int *a, int *b)
 {
-    int temp;
+	int temp;
 
 	temp = *a;
-    (*b) = temp;
-    (*a) = *b;
+	(*b) = temp;
+	(*a) = *b;
 }
 
