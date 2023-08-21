@@ -1,4 +1,4 @@
-#include "main.h"
+#include <stdio.h>
 
 /**
  * print_array - returns the alphabet
@@ -14,13 +14,12 @@ void print_array(int *a, int n)
 	i = 0;
 	while (i < n)
 	{
-		_putchar(a[i]);
+		printf("%d", a[i]);
 		i += 1;
 		if (i != n)
 		{
-			_putchar(',');
-			_putchar(' ');
+			printf(", ");
 		}
 	}
-	_putchar('\n');
+	printf("\n");
 }
