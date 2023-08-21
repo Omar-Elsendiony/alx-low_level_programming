@@ -8,7 +8,7 @@
 */
 int _atoi(char *s)
 {
-	int i, start, end, countNegatives, theNumber;
+	long int i, start, end, countNegatives, theNumber;
 
 	i = 0;
 	countNegatives = 0;
