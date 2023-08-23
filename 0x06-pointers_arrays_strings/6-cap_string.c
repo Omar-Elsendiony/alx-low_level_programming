@@ -1,8 +1,7 @@
 #include <stdio.h>
 
 /**
- * _strncat - returns the alphabet
- * @dest: pointer to integer
+ * cap_string - returns the alphabet
  * @s: pointer to second number
  * Description: The description
  * Return: void
