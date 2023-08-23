@@ -11,6 +11,7 @@ char *leet(char *s)
 	int i, j;
 
 	char letters [] = {'a', 'e', 'o', 't', 'l'};
+	char letters2 [] = {'A', 'E', 'O', 'T', 'L'};
 	char conversions [] = {4, 3, 0, 7, 1};
 	i = 0;
 
@@ -18,9 +19,10 @@ char *leet(char *s)
 	{
 		for (j = 0; j < 5; j++)
 		{
-			if (s[i] == letters[j] || s[i] == letters[j] - 32)
+			if (s[i] == letters[j] || s[i] == letters2[j])
 			{
-				s[i] = conversions[j];
+				s[i] = conversions[j] + '0';
+				break;
 			}
 		}
 		i += 1;

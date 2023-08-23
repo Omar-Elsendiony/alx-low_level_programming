@@ -9,10 +9,10 @@
 char *rot13(char *s)
 {
 	int i, j;
-	int lowerAndUpper [2];
+	int lowerAndUpper[2];
+
 	i = 0;
 	j = 0;
-
 	lowerAndUpper[0] = 65;
 	lowerAndUpper[1] = 97;
 	while (s[i] != '\0')

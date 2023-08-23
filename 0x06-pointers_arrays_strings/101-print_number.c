@@ -6,11 +6,13 @@
  * Description: The description
  * Return: 0
 */
-int absolute(int n)
+void absolute(int n)
 {
-	if (n < 0)
-		return (-n);
-	return (n);
+	int toPrint;
+	if (n == 0) return;
+	toPrint = (n % 10);
+	absolute(n / 10);
+	_putchar(toPrint + '0');
 }
 /**
  * power10 - returns the alphabet
@@ -51,11 +53,6 @@ void print_number(int n)
 		tempNumber = tempNumber / 10;
 		size = size + 1;
 	}
-	while (size > 1)
-	{
-		numberToPrint = (n % power10(size)) / (power10((size - 1)));
-		size = size - 1;
-		_putchar(numberToPrint + 48);
-	}
-	_putchar((n % 10) + 48);
+	absolute(n);
+	
 }
