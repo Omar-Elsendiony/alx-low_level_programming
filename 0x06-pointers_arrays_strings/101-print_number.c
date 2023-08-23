@@ -39,19 +39,12 @@ int power10(int exponent)
 */
 void print_number(int n)
 {
-	unsigned int size, tempNumber, numberToPrint;
+	unsigned int size;
 
 	if (n < 0)
 	{
 		_putchar(45);
-		n = -n;
-	}
-	size = 0;
-	tempNumber = n;
-	while (tempNumber != 0)
-	{
-		tempNumber = tempNumber / 10;
-		size = size + 1;
+		n = - n;
 	}
 	absolute(n);
 	
