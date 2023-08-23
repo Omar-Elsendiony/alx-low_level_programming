@@ -1,13 +1,14 @@
 #include <stdio.h>
 
 /**
- * _strcat - returns the alphabet
+ * _strncat - returns the alphabet
  * @dest: pointer to integer
  * @src: pointer to second number
+ * @n: number of chars
  * Description: The description
  * Return: void
 */
-char *_strcat(char *dest, char *src, int n)
+char *_strncat(char *dest, char *src, int n)
 {
 	int i, j;
 
@@ -17,7 +18,7 @@ char *_strcat(char *dest, char *src, int n)
 	for (j = 0; src[j] != '\0' && n != 0; j++)
 	{
 		dest[i++] = src[j];
-        n -= 1;
+		n -= 1;
 	}
 	dest[i] = '\0';
 	return (dest);
