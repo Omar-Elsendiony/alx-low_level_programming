@@ -1,20 +1,19 @@
 #include <stdio.h>
 
 /**
- * _strncat - returns the alphabet
- * @dest: pointer to integer
- * @s: pointer to second number
+ * string_toupper - returns the alphabet
+ * @s: pointer to integer
  * Description: The description
  * Return: void
 */
-char *string_toupper(char * s)
+char *string_toupper(char *s)
 {
 	int i;
 
 	i = 0;
 	while (s[i] != '\0')
-    {
-        s[i] -= 32;
-    }
+	{
+		s[i] -= 32;
+	}
 	return (s);
 }
