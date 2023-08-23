@@ -39,13 +39,14 @@ int power10(int exponent)
 */
 void print_number(int n)
 {
-	unsigned int size;
+	unsigned int modifiedN;
 
 	if (n < 0)
 	{
 		_putchar(45);
 		n = - n;
 	}
-	absolute(n);
+	modifiedN = n;
+	absolute(modifiedN);
 	
 }
