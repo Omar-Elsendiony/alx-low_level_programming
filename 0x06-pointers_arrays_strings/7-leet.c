@@ -12,6 +12,7 @@ char *leet(char *s)
 
 	char letters [] = {'a', 'e', 'o', 't', 'l'};
 	char conversions [] = {4, 3, 0, 7, 1};
+	i = 0;
 
 	while (s[i] != '\0')
 	{
@@ -22,6 +23,7 @@ char *leet(char *s)
 				s[i] = conversions[j];
 			}
 		}
+		i += 1;
 	}
 	return (s);
 }
