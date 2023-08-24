@@ -1,6 +1,4 @@
 #include "main.h"
-#include <stdio.h>
-
 
 /**
  * getLength - returns the alphabet
