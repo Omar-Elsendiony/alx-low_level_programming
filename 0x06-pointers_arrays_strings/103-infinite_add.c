@@ -141,7 +141,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 
 	n1Length = getLength(n1);
 	n2Length = getLength(n2);
-	if (n1Length > size_r || n2Length > size_r)
+	if (n1Length > size_r - 1 || n2Length > size_r - 1)
 		return (0);
 	if (n1Length > n2Length)
 	{
