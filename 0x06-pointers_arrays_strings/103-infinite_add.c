@@ -89,7 +89,6 @@ char *returnAddition(char *n1, char *n2, char *r, int size_r)
 	}
 	else
 		r[i] = '\0';
-	printf("%s\n", r);
 	return (r);
 }
 
@@ -127,7 +126,6 @@ char *returnAddition2(char *n1, char *n2, char *r, int size_r)
 	}
 	else
 		r[i] = '\0';
-	printf("%s\n", r);
 	return (r);
 }
 /**
