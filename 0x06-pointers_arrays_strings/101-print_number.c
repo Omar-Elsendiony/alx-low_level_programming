@@ -9,7 +9,9 @@
 void absolute(unsigned int n)
 {
 	unsigned int toPrint;
-	if (n == 0) return;
+
+	if (n == 0)
+		return;
 	toPrint = (n % 10);
 	absolute(n / 10);
 	_putchar(toPrint + '0');
@@ -27,9 +29,13 @@ void print_number(int n)
 	if (n < 0)
 	{
 		_putchar(45);
-		n = - n;
+		n = -n;
+	}
+	else if (n == 0)
+	{
+		_putchar('0');
+		return;
 	}
 	modifiedN = n;
 	absolute(modifiedN);
-	
 }
