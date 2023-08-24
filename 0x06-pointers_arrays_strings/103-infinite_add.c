@@ -141,7 +141,7 @@ char *returnAddition2(char *n1, char *n2, char *r, int size_r)
 */
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-	int n1Length, n2Length, i, j;
+	int n1Length, n2Length;
 
 	n1Length = getLength(n1);
 	n2Length = getLength(n2);
