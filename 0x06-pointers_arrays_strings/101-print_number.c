@@ -15,23 +15,6 @@ void absolute(unsigned int n)
 	_putchar(toPrint + '0');
 }
 /**
- * power10 - returns the alphabet
- * @exponent: the number of rimes to print '\'
- * Description: The description
- * Return: 0
-*/
-int power10(unsigned int exponent)
-{
-	int i, result;
-
-	result = 1;
-	for (i = 0; i < exponent; i++)
-	{
-		result = result * 10;
-	}
-	return (result);
-}
-/**
  * print_number - returns the alphabet
  * @n: the number of rimes to print '\'
  * Description: The description
