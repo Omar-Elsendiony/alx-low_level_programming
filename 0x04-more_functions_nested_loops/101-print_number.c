@@ -6,11 +6,13 @@
  * Description: The description
  * Return: 0
 */
-int absolute(int n)
+void absolute(unsigned int n)
 {
-	if (n < 0)
-		return (-n);
-	return (n);
+	unsigned int toPrint;
+	if (n == 0) return;
+	toPrint = (n % 10);
+	absolute(n / 10);
+	_putchar(toPrint + '0');
 }
 /**
  * power10 - returns the alphabet
@@ -18,7 +20,7 @@ int absolute(int n)
  * Description: The description
  * Return: 0
 */
-int power10(int exponent)
+int power10(unsigned int exponent)
 {
 	int i, result;
 
@@ -37,25 +39,14 @@ int power10(int exponent)
 */
 void print_number(int n)
 {
-	unsigned int size, tempNumber, numberToPrint;
+	unsigned int modifiedN;
 
 	if (n < 0)
 	{
 		_putchar(45);
-		n = -n;
+		n = - n;
 	}
-	size = 0;
-	tempNumber = n;
-	while (tempNumber != 0)
-	{
-		tempNumber = tempNumber / 10;
-		size = size + 1;
-	}
-	while (size > 1)
-	{
-		numberToPrint = (n % power10(size)) / (power10((size - 1)));
-		size = size - 1;
-		_putchar(numberToPrint + 48);
-	}
-	_putchar((n % 10) + 48);
+	modifiedN = n;
+	absolute(modifiedN);
+	
 }

@@ -6,9 +6,9 @@
  * Description: The description
  * Return: 0
 */
-void absolute(int n)
+void absolute(unsigned int n)
 {
-	int toPrint;
+	unsigned int toPrint;
 	if (n == 0) return;
 	toPrint = (n % 10);
 	absolute(n / 10);
@@ -20,7 +20,7 @@ void absolute(int n)
  * Description: The description
  * Return: 0
 */
-int power10(int exponent)
+int power10(unsigned int exponent)
 {
 	int i, result;
 
