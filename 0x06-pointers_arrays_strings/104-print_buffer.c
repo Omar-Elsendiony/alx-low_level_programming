@@ -3,6 +3,7 @@
 /**
  * printString - returns the alphabet
  * @b: pointer to second number
+ * @i: pointer to second number
  * @startI: pointer to second number
  * Description: The description
  * Return: void
