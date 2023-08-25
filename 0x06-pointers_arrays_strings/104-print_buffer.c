@@ -9,7 +9,7 @@
 */
 int printString(char *b, int startI)
 {
-	int non_zero, l;
+	int l;
 
 	for (l = startI; l < startI + 10 ; l++)
 	{
