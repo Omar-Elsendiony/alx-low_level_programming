@@ -7,11 +7,11 @@
  * Description: The description
  * Return: void
 */
-void printString(char *b, int startI)
+void printString(char *b, int startI, int i)
 {
 	int l;
 
-	for (l = startI; l < startI + 10 ; l++)
+	for (l = startI; l < i ; l++)
 	{
 		if (b[l] >= 0 && b[l] <= 31)
 		{
@@ -86,7 +86,7 @@ void print_buffer(char *b, int size)
 			countTakenSpaces += 1;
 		}
 		printf(" ");
-		printString(b, startI);
+		printString(b, startI, i);
 		i -= 1;
 		printf("\n");
 	}
