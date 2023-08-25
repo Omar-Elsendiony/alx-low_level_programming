@@ -7,7 +7,7 @@
  * Description: The description
  * Return: void
 */
-int printString(char *b, int startI)
+void printString(char *b, int startI)
 {
 	int l;
 
