@@ -10,12 +10,13 @@
  */
 unsigned int _strspn(char *s, char *accept)
 {
-		unsigned int i, count, j;
+		unsigned int i, count, j, prevCount;
 
 		i = 0;
 		count = 0;
 		while (s[i] != '\0')
 		{
+			prevCount = count;
 			for (j = 0; accept[j] != '\0'; j++)
 			{
 				if (accept[j] == s[i])
@@ -24,6 +25,8 @@ unsigned int _strspn(char *s, char *accept)
 					break;
 				}
 			}
+			if (prevCount == count)
+				break;
 			i++;
 		}
 		return (count);
