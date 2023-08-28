@@ -10,13 +10,12 @@
  */
 char *_strpbrk(char *s, char *accept)
 {
-		unsigned int i, count, j, prevCount;
+		unsigned int i, count, j;
 
 		i = 0;
 		count = 0;
 		while (s[i] != '\0')
 		{
-			prevCount = count;
 			for (j = 0; accept[j] != '\0'; j++)
 			{
 				if (accept[j] == s[i])
@@ -29,5 +28,5 @@ char *_strpbrk(char *s, char *accept)
 				return (s + i);
 			i++;
 		}
-		return (count);
+		return (NULL);
 }
