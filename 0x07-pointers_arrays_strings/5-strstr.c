@@ -10,7 +10,7 @@
  */
 char *_strstr(char *haystack, char *needle)
 {
-		unsigned int i, j;
+		unsigned int i, j, oldI;
 
 		i = 0;
 		if (strlen(needle) > strlen(haystack))
@@ -18,14 +18,17 @@ char *_strstr(char *haystack, char *needle)
 		while (haystack[i] != '\0')
 		{
 			j = 0;
+			oldI = i;
 			while (needle[j] != '\0')
 			{
 				if (haystack[i] != needle[j])
 					break;
+				i++;
 				j++;
 			}
 			if (needle[j] == '\0')
-				return (haystack + i);
+				return (haystack + oldI);
+			i = oldI;
 			i++;
 		}
 		return (NULL);
