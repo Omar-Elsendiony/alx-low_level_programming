@@ -10,7 +10,7 @@
  */
 char *_strstr(char *haystack, char *needle)
 {
-		unsigned int i, count, j;
+		unsigned int i, j;
 
 		i = 0;
 		if (strlen(needle) > strlen(haystack))
