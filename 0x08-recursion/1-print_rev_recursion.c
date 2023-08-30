@@ -15,7 +15,7 @@ void print_utility(char *s, int i)
 	_putchar(s[i]);
 }
 /**
- * _puts_recursion - prints buffer in hexa
+ * _print_rev_recursion - prints buffer in hexa
  * @s: the address of memory to print
  *
  * Return: Nothing.
