@@ -23,5 +23,4 @@ void print_utility(char *s, int i)
 void _print_rev_recursion(char *s)
 {
 	print_utility(s, 0);
-	_putchar('\n');
 }
