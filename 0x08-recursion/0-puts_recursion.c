@@ -12,7 +12,7 @@ void print_utility(char *s, int i)
 	if (s[i] == '\0')
 		return;
 	_putchar(s[i]);
-	print_utility(s, i++);
+	print_utility(s, ++i);
 }
 /**
  * _puts_recursion - prints buffer in hexa
