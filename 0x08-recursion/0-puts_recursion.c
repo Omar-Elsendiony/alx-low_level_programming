@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * set_string - prints buffer in hexa
+ * _puts_recursion - prints buffer in hexa
  * @s: the address of memory to print
  *
  * Return: Nothing.
