@@ -11,7 +11,7 @@ void print_utility(char *s, int i)
 {
 	if (s[i] == '\0')
 		return;
-	print_utility(s, ++i);
+	print_utility(s, i + 1);
 	_putchar(s[i]);
 }
 /**
