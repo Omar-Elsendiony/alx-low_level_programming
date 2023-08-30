@@ -17,12 +17,12 @@ int utility(int n, int i)
 		return (utility(n, i - 1));
 }
 /**
- * _sqrt_recursion - prints buffer in hexa
+ * is_prime_number - prints buffer in hexa
  * @n: the address of memory to print
  *
  * Return: Nothing.
  */
-int _sqrt_recursion(int n)
+int is_prime_number(int n)
 {
 	return (utility(n, n / 2));
 }
