@@ -1,4 +1,21 @@
 #include "main.h"
+
+/**
+ * utility3 - prints buffer in hexa
+ * @s1: the address of memory to print
+ * @s2: the address of memory to print
+ * @i1: the address of memory to print
+ * @i2: the address of memory to print
+ *
+ * Return: Nothing.
+ */
+int utility3(char *s1, char *s2, int i1, int i2)
+{
+	if (s2[i2] == s2[i2 + 1])
+		return (utility3(s1, s2, i1, i2 + 1));
+	return (i2);
+}
+
 /**
  * utility2 - prints buffer in hexa
  * @s1: the address of memory to print
@@ -10,11 +27,8 @@
  */
 int utility2(char *s1, char *s2, int i1, int i2)
 {
-	if (s1[i1] != s2[i2])
-	{
-		while (s1[i1] != '\0' && s1[i1] != s2[i2])
-			i1++;
-	}
+	if (s1[i1] != '\0' && s1[i1] != s2[i2])
+		return (utility2(s1, s2, i1 + 1, i2));
 	return (i1);
 }
 /**
@@ -33,8 +47,7 @@ int utility(char *s1, char *s2, int i1, int i2)
 	res = 0;
 	if (s2[i2] == '*')
 	{
-		while (s2[i2 + 1] != '\0' && s2[i2 + 1] == s2[i2])
-			i2++;
+		i2 = utility3(s1, s2, i1, i2);
 		i1 = utility2(s1, s2, i1, i2 + 1);
 		if (s1[i1] != '\0')
 			res = utility(s1, s2, i1 + 1, i2);
