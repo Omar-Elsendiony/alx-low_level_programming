@@ -1,6 +1,4 @@
 #include "main.h"
-#include <string.h>
-
 /**
  * utility2 - prints buffer in hexa
  * @s1: the address of memory to print
