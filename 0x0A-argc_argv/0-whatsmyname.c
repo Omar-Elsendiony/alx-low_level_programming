@@ -1,4 +1,4 @@
-#include "main.h"
+#include <stdio.h>
 /* betty style doc for function main goes there */
 /**
  * main - starting point
@@ -9,6 +9,6 @@
 */
 int main(int argc, char **argv)
 {
-	_putchar(argv[argc - argc]);
+	printf("%s\n", argv[argc - argc]);
 	return (0);
 }
