@@ -1,3 +1,4 @@
+#include "main.h"
 #include <stdio.h>
 /* betty style doc for function main goes there */
 /**
@@ -14,6 +15,6 @@ int main(int argc, char **argv)
 	count = 0;
 	for (i = 0; argv[i] != NULL; i++)
 		count++;
-	printf("%d\n", argc);
+	printf("%d\n",count);
 	return (0);
 }
