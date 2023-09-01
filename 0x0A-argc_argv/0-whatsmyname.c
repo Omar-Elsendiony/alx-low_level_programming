@@ -1,6 +1,3 @@
-#include <stdlib.h>
-#include <time.h>
-/* more headers goes there */
 #include <stdio.h>
 /* betty style doc for function main goes there */
 /**
@@ -10,5 +7,6 @@
 */
 int main(int argc, char **argv)
 {
-	printf("%s\n", argv[0]);
+	printf("%s\n", argv[argc - argc]);
+    return (0);
 }
