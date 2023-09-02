@@ -16,7 +16,7 @@
  * Description: The description
  * Return: 0
 */
-int utility(int m, int a, int c, int coins[], int nC, unsigned int dp[1000000])
+int utility(unsigned int m, unsigned int a, int c, int coins[], unsigned int dp[1000000])
 {
 	int i, min, ret;
 
@@ -33,9 +33,9 @@ int utility(int m, int a, int c, int coins[], int nC, unsigned int dp[1000000])
 		dp[a] = c;
 		return (dp[a]);
 	}
-	for (i = 0; i < nC; i++)
+	for (i = 0; i < 5; i++)
 	{
-		ret = utility(m, a + coins[i], c + 1, coins, nC, dp);
+		ret = utility(m, a + coins[i], c + 1, coins, dp);
 		if (ret < min && ret != -1)
 		{
 			min = ret;
@@ -73,7 +73,7 @@ int main(int argc, char **argv)
 		printf("0\n");
 		return (0);
 	}
-	c = utility(m, 0, 0, coins, 5, dp);
+	c = utility(m, 0, 0, coins, dp);
 	printf("%d\n", c);
 	return (0);
 }
