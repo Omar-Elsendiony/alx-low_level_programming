@@ -2,32 +2,45 @@
 #include <stdlib.h>
 #include <limits.h>
 
-int utility(int money, int accumulated, int count, int coins[], int numberCoins, int dp[1000])
+
+/* betty style doc for function main goes there */
+/**
+ * utility - starting point
+ * @m: count
+ * @a: arguments
+ * @count: arguments
+ * @nCoins: arguments
+ * @dp: arguments
+ * @coins: arguments
+ * Description: The description
+ * Return: 0
+*/
+int utility(int m, int a, int count, int coins[], int nCoins, int dp[1000])
 {
 	int i, min, ret;
 
-	if (dp[accumulated] != -1)
-		return (dp[accumulated]);
+	if (dp[a] != -1)
+		return (dp[a]);
 	min = INT_MAX;
-	if (accumulated > money)
+	if (a > m)
 	{
-		dp[accumulated] = -1;
-		return (dp[accumulated]);
+		dp[a] = -1;
+		return (dp[a]);
 	}
-	if (accumulated == money)
+	if (a == m)
 	{
-		dp[accumulated] = count;
-		return (dp[accumulated]);
+		dp[a] = count;
+		return (dp[a]);
 	}
-	for (i = 0; i < numberCoins; i++)
+	for (i = 0; i < nCoins; i++)
 	{
-		ret = utility(money, accumulated + coins[i], count + 1, coins, numberCoins, dp);
+		ret = utility(m, a + coins[i], count + 1, coins, nCoins, dp);
 		if (ret < min && ret != -1)
 		{
 			min = ret;
 		}
 	}
-	dp[accumulated] = min;
+	dp[a] = min;
 	return (min);
 }
 /* betty style doc for function main goes there */
@@ -40,7 +53,7 @@ int utility(int money, int accumulated, int count, int coins[], int numberCoins,
 */
 int main(int argc, char **argv)
 {
-	int i, money, count;
+	int i, m, count;
 	int coins[] = {25, 10, 5, 2, 1};
 	int dp[1000];
 
@@ -53,13 +66,13 @@ int main(int argc, char **argv)
 		puts("Error");
 		return (0);
 	}
-	money = atoi(argv[1]);
-	if (money <= 0)
+	m = atoi(argv[1]);
+	if (m <= 0)
 	{
 		puts("0");
 		return (0);
 	}
-	count = utility(money, 0, 0, coins, 5, dp);
+	count = utility(m, 0, 0, coins, 5, dp);
 	printf("%d\n", count);
 	return (0);
 }
