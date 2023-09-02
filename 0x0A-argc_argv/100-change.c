@@ -7,16 +7,16 @@
 /* betty style doc for function main goes there */
 /**
  * utility - starting point
- * @m: count
+ * @m: c
  * @a: arguments
- * @count: arguments
- * @nCoins: arguments
+ * @c: arguments
+ * @nC: arguments
  * @dp: arguments
  * @coins: arguments
  * Description: The description
  * Return: 0
 */
-int utility(int m, int a, int count, int coins[], int nCoins, unsigned int dp[1000000])
+int utility(int m, int a, int c, int coins[], int nC, unsigned int dp[1000000])
 {
 	int i, min, ret;
 
@@ -30,12 +30,12 @@ int utility(int m, int a, int count, int coins[], int nCoins, unsigned int dp[10
 	}
 	if (a == m)
 	{
-		dp[a] = count;
+		dp[a] = c;
 		return (dp[a]);
 	}
-	for (i = 0; i < nCoins; i++)
+	for (i = 0; i < nC; i++)
 	{
-		ret = utility(m, a + coins[i], count + 1, coins, nCoins, dp);
+		ret = utility(m, a + coins[i], c + 1, coins, nC, dp);
 		if (ret < min && ret != -1)
 		{
 			min = ret;
@@ -47,14 +47,14 @@ int utility(int m, int a, int count, int coins[], int nCoins, unsigned int dp[10
 /* betty style doc for function main goes there */
 /**
  * main - starting point
- * @argc: count
+ * @argc: c
  * @argv: arguments
  * Description: The description
  * Return: 0
 */
 int main(int argc, char **argv)
 {
-	int i, m, count;
+	int i, m, c;
 	int coins[] = {25, 10, 5, 2, 1};
 	unsigned int dp[1000000];
 
@@ -73,7 +73,7 @@ int main(int argc, char **argv)
 		printf("0\n");
 		return (0);
 	}
-	count = utility(m, 0, 0, coins, 5, dp);
-	printf("%d\n", count);
+	c = utility(m, 0, 0, coins, 5, dp);
+	printf("%d\n", c);
 	return (0);
 }
