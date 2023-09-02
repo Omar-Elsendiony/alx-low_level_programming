@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "main.h"
 #include <stdlib.h>
 #include <limits.h>
 
@@ -63,13 +64,13 @@ int main(int argc, char **argv)
 	}
 	if (argc - 1 != 1)
 	{
-		puts("Error");
+		printf("Error\n");
 		return (0);
 	}
 	m = atoi(argv[1]);
 	if (m <= 0)
 	{
-		puts("0");
+		printf("0\n");
 		return (0);
 	}
 	count = utility(m, 0, 0, coins, 5, dp);
