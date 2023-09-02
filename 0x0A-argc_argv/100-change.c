@@ -71,7 +71,7 @@ int main(int argc, char **argv)
 	if (m <= 0)
 	{
 		printf("0\n");
-		return (1);
+		return (0);
 	}
 	count = utility(m, 0, 0, coins, 5, dp);
 	printf("%d\n", count);
