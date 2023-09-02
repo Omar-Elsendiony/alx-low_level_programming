@@ -51,13 +51,13 @@ int main(int argc, char **argv)
 	if (argc - 1 != 1)
 	{
 		puts("Error");
-		return (1);
+		return (0);
 	}
 	money = atoi(argv[1]);
 	if (money <= 0)
 	{
 		puts("0");
-		return (1);
+		return (0);
 	}
 	count = utility(money, 0, 0, coins, 5, dp);
 	printf("%d\n", count);
