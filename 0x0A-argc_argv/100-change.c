@@ -16,11 +16,11 @@
  * Description: The description
  * Return: 0
 */
-int utility(int m, int a, int count, int coins[], int nCoins, int dp[1000000])
+int utility(int m, int a, int count, int coins[], int nCoins, unsigned int dp[1000000])
 {
 	int i, min, ret;
 
-	if (dp[a] != -1)
+	if (dp[a] != (unsigned int) -1)
 		return (dp[a]);
 	min = INT_MAX;
 	if (a > m)
@@ -56,7 +56,7 @@ int main(int argc, char **argv)
 {
 	int i, m, count;
 	int coins[] = {25, 10, 5, 2, 1};
-	int dp[1000000];
+	unsigned int dp[1000000];
 
 	for (i = 0; i < 1000000; i++)
 	{
