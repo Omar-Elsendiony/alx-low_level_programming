@@ -16,7 +16,7 @@
  * Description: The description
  * Return: 0
 */
-int utility(int m, int a, int count, int coins[], int nCoins, int dp[100000])
+int utility(int m, int a, int count, int coins[], int nCoins, int dp[1000000])
 {
 	int i, min, ret;
 
@@ -56,9 +56,9 @@ int main(int argc, char **argv)
 {
 	int i, m, count;
 	int coins[] = {25, 10, 5, 2, 1};
-	int dp[100000];
+	int dp[1000000];
 
-	for (i = 0; i < 100000; i++)
+	for (i = 0; i < 1000000; i++)
 	{
 		dp[i] = -1;
 	}
@@ -68,7 +68,7 @@ int main(int argc, char **argv)
 		return (1);
 	}
 	m = atoi(argv[1]);
-	if (m <= 0)
+	if (m < 0)
 	{
 		printf("0\n");
 		return (0);
