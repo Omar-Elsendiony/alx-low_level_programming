@@ -65,13 +65,13 @@ int main(int argc, char **argv)
 	if (argc - 1 != 1)
 	{
 		printf("Error\n");
-		return (0);
+		return (1);
 	}
 	m = atoi(argv[1]);
 	if (m <= 0)
 	{
 		printf("0\n");
-		return (0);
+		return (1);
 	}
 	count = utility(m, 0, 0, coins, 5, dp);
 	printf("%d\n", count);
