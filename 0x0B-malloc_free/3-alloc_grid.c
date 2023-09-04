@@ -29,23 +29,22 @@ int getLength(char *str)
 int **alloc_grid(int width, int height)
 {
 	int i, j;
-	int **allocatedMemory, *allocatedMemory2;
+	int **allocatedMemory;
 
 	if (width <= 0 || height <= 0)
 	{
 		return NULL;
 	}
-	allocatedMemory = malloc(sizeof(int) * height);
+	allocatedMemory = malloc(sizeof(int) * height * width);
 	if (allocatedMemory == NULL)
 		return (NULL);
 	for (i = 0; i < height; i++)
 	{
-		allocatedMemory2 = malloc(width * sizeof(int));
-		if (allocatedMemory2 == NULL)
+		allocatedMemory[i] = malloc(width * sizeof(int));
+		if (allocatedMemory[i] == NULL)
 			return (NULL);
 		for (j = 0; j < width; j++)
-			allocatedMemory2[j] = 0;
-		allocatedMemory[i] = allocatedMemory2;
+			allocatedMemory[i][j] = 0;
 	}
 	return (allocatedMemory);
 }
