@@ -38,7 +38,7 @@ int main(void)
 {
     int **grid;
 
-    grid = alloc_grid(50000, 000);
+    grid = alloc_grid(50000, 5000);
     if (grid == NULL)
     {
         return (1);
