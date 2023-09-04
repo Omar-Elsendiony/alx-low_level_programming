@@ -5,7 +5,6 @@
  * getLength - prints buffer in hexa
  * @argv: the address of memory to print
  * @argc: the address of memory to print
- * @arrSizes: the address of memory to print
  *
  * Return: Nothing.
  */
@@ -50,12 +49,12 @@ char *argstostr(int ac, char **av)
 	index = 0;
 	for (i = 0; i < totalsize; i++)
 	{
-        j = 0;
+		j = 0;
 		while (av[index][j] != '\0')
 		{
 			str[i] = av[index][j];
 			i++;
-            j++;
+			j++;
 		}
 		str[i] = '\n';
 		index += 1;

@@ -16,6 +16,7 @@ void freeAll(int **arg, int lasti)
     {
         free(arg[i]);
     }
+    free(arg);
 }
 /**
  * alloc_grid - prints buffer in hexa
