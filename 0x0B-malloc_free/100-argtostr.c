@@ -19,7 +19,10 @@ int getLength(char **argv, int argc, int *arrSizes)
 		length = 0;
 		j = 0;
 		while (argv[i][j] != '\0')
+		{
 			length += 1;
+			j++;
+		}
 		sumLengths += length;
 		arrSizes[i] = length;
 	}
