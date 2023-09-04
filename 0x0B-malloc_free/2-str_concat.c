@@ -28,7 +28,7 @@ int getLength(char *str)
  */
 char *str_concat(char *s1, char *s2)
 {
-	unsigned int i, size1, size2;
+	unsigned int i, j, size1, size2;
 	char *allocatedMemory;
 
 	size1 = getLength(s1);
@@ -40,9 +40,11 @@ char *str_concat(char *s1, char *s2)
 	{
 		allocatedMemory[i] = s1[i];
 	}
-	for (; i < size2; i++)
+	j = 0;
+	for (; j < size2; i++)
 	{
-		allocatedMemory[i] = s2[i];
+		allocatedMemory[i] = s2[j];
+		j++;
 	}
 	allocatedMemory[i] = '\0';
 	return (allocatedMemory);

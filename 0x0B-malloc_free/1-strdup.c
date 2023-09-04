@@ -42,6 +42,6 @@ char *_strdup(char *str)
 	{
 		allocatedMemory[i] = str[i];
 	}
-	allocatedMemory[i] ='\0';
+	allocatedMemory[i] = '\0';
 	return (allocatedMemory);
 }
