@@ -1,6 +1,6 @@
 #include "main.h"
 #include <stdlib.h>
-
+#include <stdio.h>
 /**
  * getLength - prints buffer in hexa
  * @argv: the address of memory to print
@@ -64,7 +64,7 @@ char *argstostr(int ac, char **av)
 		str[i] = '\n';
 		index += 1;
 	}
-
 	str[i] = '\0';
+    free(arrSizes);
 	return (str);
 }
