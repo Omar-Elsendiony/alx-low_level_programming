@@ -9,7 +9,7 @@
  *
  * Return: Nothing.
  */
-int getLength(char **argv, int argc, int *arrSizes)
+int getLength(char **argv, int argc)
 {
 	int i, length, j, sumLengths;
 
@@ -24,7 +24,6 @@ int getLength(char **argv, int argc, int *arrSizes)
 			j++;
 		}
 		sumLengths += length;
-		arrSizes[i] = length;
 	}
 	return (sumLengths);
 }
@@ -39,16 +38,11 @@ int getLength(char **argv, int argc, int *arrSizes)
 char *argstostr(int ac, char **av)
 {
 	int i, j, totalsize, index;
-	int *arrSizes;
 	char *str;
 
 	if (ac <= 0)
 		return (NULL);
-
-	arrSizes = malloc(ac * sizeof(int));
-	if (arrSizes == NULL)
-		return (NULL);
-	totalsize = getLength(av, ac, arrSizes);
+	totalsize = getLength(av, ac);
 	totalsize += ac;
 	str = malloc(totalsize + 1);
 	if (str == NULL)
@@ -56,15 +50,16 @@ char *argstostr(int ac, char **av)
 	index = 0;
 	for (i = 0; i < totalsize; i++)
 	{
-		for (j = 0; j < arrSizes[index]; j++)
+        j = 0;
+		while (av[index][j] != '\0')
 		{
 			str[i] = av[index][j];
 			i++;
+            j++;
 		}
 		str[i] = '\n';
 		index += 1;
 	}
 	str[i] = '\0';
-    free(arrSizes);
 	return (str);
 }
