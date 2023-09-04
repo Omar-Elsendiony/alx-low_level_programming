@@ -2,21 +2,21 @@
 #include <stdlib.h>
 
 /**
- * alloc_grid - prints buffer in hexa
- * @width: the address of memory to print
- * @height: the address of memory to print
+ * freeAll - prints buffer in hexa
+ * @arg: the address of memory to print
+ * @lasti: the address of memory to print
  *
  * Return: Nothing.
  */
 void freeAll(int **arg, int lasti)
 {
-    int i;
+	int i;
 
-    for (i = 0; i < lasti; i++)
-    {
-        free(arg[i]);
-    }
-    free(arg);
+	for (i = 0; i < lasti; i++)
+	{
+		free(arg[i]);
+	}
+	free(arg);
 }
 /**
  * alloc_grid - prints buffer in hexa
@@ -41,10 +41,10 @@ int **alloc_grid(int width, int height)
 	{
 		allocatedMemory[i] = (int *)malloc(sizeof(int) * width);
 		if (allocatedMemory[i] == NULL)
-        {
-            freeAll(allocatedMemory,i);
+		{
+			freeAll(allocatedMemory, i);
 			return (NULL);
-        }
+		}
 	}
 	return (allocatedMemory);
 }
