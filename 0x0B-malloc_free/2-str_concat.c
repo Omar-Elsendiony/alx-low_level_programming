@@ -12,7 +12,7 @@ int getLength(char *str)
 	int i, length;
 
 	length = 0;
-	for (i = 0; str[i] != '\0'; i++)
+	for (i = 0; str != NULL && str[i] != '\0'; i++)
 	{
 		length += 1;
 	}
