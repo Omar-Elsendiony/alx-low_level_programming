@@ -47,7 +47,7 @@ char *argstostr(int ac, char **av)
 		return (NULL);
 	totalsize = getLength(av, ac, arrSizes);
 	totalsize += ac;
-	str = malloc(sizeof(int) * totalsize + 1);
+	str = malloc(totalsize + 1);
 	if (str == NULL)
 		return (NULL);
 	index = 0;
