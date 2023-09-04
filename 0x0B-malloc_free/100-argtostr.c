@@ -53,7 +53,7 @@ char *argstostr(int ac, char **av)
 	index = 0;
 	for (i = 0; i < totalsize; i++)
 	{
-		for (j = 0; j < arrSizes[i]; j++)
+		for (j = 0; j < arrSizes[index]; j++)
 		{
 			str[i] = av[index][j];
 			i++;
