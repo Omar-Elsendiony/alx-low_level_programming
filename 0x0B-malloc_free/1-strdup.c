@@ -35,12 +35,13 @@ char *_strdup(char *str)
 		return (NULL);
 	}
 	size = getLength(str);
-	allocatedMemory = malloc(size);
+	allocatedMemory = malloc(size + 1);
 	if (str == NULL || allocatedMemory == NULL)
 		return (NULL);
 	for (i = 0; i < size; i++)
 	{
 		allocatedMemory[i] = str[i];
 	}
+	allocatedMemory[i] ='\0';
 	return (allocatedMemory);
 }
