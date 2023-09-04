@@ -1,6 +1,5 @@
 #include "main.h"
-#include <stdio.h>
-
+#include <stdlib.h>
 /**
  * _memcpy - prints buffer in hexa
  * @size: the address of memory to print
@@ -10,7 +9,7 @@
  */
 char *create_array(unsigned int size, char c)
 {
-	int i;
+	unsigned int i;
 	char *allocatedMemory;
 
 	allocatedMemory = malloc(size);
