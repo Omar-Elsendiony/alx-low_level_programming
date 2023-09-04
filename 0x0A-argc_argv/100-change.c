@@ -10,7 +10,6 @@
  * @m: c
  * @a: arguments
  * @c: arguments
- * @nC: arguments
  * @dp: arguments
  * @coins: arguments
  * Description: The description
