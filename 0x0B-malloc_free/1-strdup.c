@@ -30,9 +30,13 @@ char *_strdup(char *str)
 	unsigned int i, size;
 	char *allocatedMemory;
 
+	if (str == NULL)
+	{
+		return (NULL);
+	}
 	size = getLength(str);
 	allocatedMemory = malloc(size);
-	if (str == NULL || allocatedMemory == NULL || size == 0)
+	if (str == NULL || allocatedMemory == NULL)
 		return (NULL);
 	for (i = 0; i < size; i++)
 	{
