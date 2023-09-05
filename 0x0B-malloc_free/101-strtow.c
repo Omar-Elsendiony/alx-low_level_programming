@@ -85,6 +85,8 @@ char **strtow(char *str)
 		return (NULL);
 	}
 	numberWords = getNumberWords(str);
+	if (numberWords == 0)
+		return (NULL);
 	words = malloc(sizeof(char *) * (numberWords + 1));
 	getActualWords(str, words, numberWords);
 	words[numberWords] = NULL;
