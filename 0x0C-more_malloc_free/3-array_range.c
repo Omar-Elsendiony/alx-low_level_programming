@@ -11,12 +11,12 @@
  */
 int *array_range(int min, int max)
 {
-	char *allocatedMem;
-	unsigned int i, diff;
+	int *allocatedMem;
+	int i, diff;
 
 	if (min > max)
 		return (NULL);
-	allocatedMem = malloc(max - min + 1);
+	allocatedMem = malloc((max - min + 1) * sizeof(int));
 	if (allocatedMem == NULL)
 	{
 		return (NULL);
