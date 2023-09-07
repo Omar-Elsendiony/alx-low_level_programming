@@ -14,7 +14,7 @@ void *malloc_checked(unsigned int b)
 	allocatedMem = malloc(b);
 	if (allocatedMem == NULL)
 	{
-		return (98);
+		*allocatedMem = 0x98;
 	}
 	return (allocatedMem);
 }
