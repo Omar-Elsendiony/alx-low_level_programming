@@ -15,9 +15,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	char *allocatedMem;
 	unsigned int i = 0, j = 0, comparator = 0;
 
-	allocatedMem = malloc(strlen(s1) + strlen(s2) + 1);
-	if (allocatedMem == NULL)
-		return (NULL);
 	if (s1 == NULL)
 	{
 		s1 = "";
@@ -26,7 +23,9 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		s2 = "";
 	}
-
+	allocatedMem = malloc(strlen(s1) + strlen(s2) + 1);
+	if (allocatedMem == NULL)
+		return (NULL);
 	while (s1[i] != '\0')
 	{
 		allocatedMem[i] = s1[i];
