@@ -12,7 +12,7 @@
 int *array_range(int min, int max)
 {
 	int *allocatedMem;
-	int i, diff;
+	int i;
 
 	if (min > max)
 		return (NULL);
@@ -21,7 +21,6 @@ int *array_range(int min, int max)
 	{
 		return (NULL);
 	}
-	diff = max - min + 1;
 	for (i = min; i <= max; i++)
 	{
 		allocatedMem[i - min] = i;
