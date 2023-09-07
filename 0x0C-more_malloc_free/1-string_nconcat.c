@@ -32,7 +32,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		allocatedMem[i] = s1[i];
 		i++;
 	}
-	while (s2[j] != '\0' && comparator != n)
+	while (s2[j] != '\0' && comparator < n && comparator < strlen(s1))
 	{
 		allocatedMem[i] = s2[j];
 		i++;
