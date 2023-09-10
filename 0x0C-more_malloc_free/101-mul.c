@@ -12,38 +12,37 @@
  */
 void simple_print_buffer(char *buffer, unsigned int size)
 {
-    unsigned int i;
+	unsigned int i;
 
-    i = 0;
-    while (i < size)
-    {
-        if (i % 10)
-        {
-            printf(" ");
-        }
-        if (!(i % 10) && i)
-        {
-            printf("\n");
-        }
-        printf("0x%02x", buffer[i]);
-        i++;
-    }
-    printf("\n");
+	i = 0;
+	while (i < size)
+	{
+		if (i % 10)
+		{
+			printf(" ");
+		}
+		if (!(i % 10) && i)
+		{
+			printf("\n");
+		}
+		printf("0x%02x", buffer[i]);
+		i++;
+	}
+	printf("\n");
 }
 
 /**
  * main - check the code for
- *
+ * @argc:g
+ * @argv: g
  * Return: Always 0.
  */
 int main(int argc, char **argv)
 {
-    if (argc != 3)
-    {
-        printf("Error\n");
-        exit(98);
-    }
-    
-    
-    return (0);
+	if (argc != 3)
+	{
+		printf("Error\n");
+		exit(98);
+	}
+	return (0);
 }
