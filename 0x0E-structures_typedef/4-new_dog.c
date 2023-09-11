@@ -13,8 +13,23 @@ dog_t *new_dog(char *name, float age, char *owner)
 	struct dog *d = malloc(sizeof(struct dog));
 	if (d == NULL)
 		return (NULL);
-	d->name = name;
+	if (name != NULL)
+	{
+		d->name = malloc(sizeof(name));
+		if (d->name == NULL)
+			return NULL;
+	}
+	else
+		d->name = NULL;
+	
 	d->age = age;
-	d->owner = owner;
+	if (owner != NULL)
+	{
+		d->owner = malloc(sizeof(owner));
+		if (d->owner == NULL)
+			return NULL;
+	}
+	else
+		d->owner = NULL;
 	return (d);
 }
