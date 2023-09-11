@@ -1,5 +1,5 @@
 #include "dog.h"
-
+#include <stdio.h>
 /**
  * print_dog - prints buffer in hexa
  * @d: the address of memory to print
