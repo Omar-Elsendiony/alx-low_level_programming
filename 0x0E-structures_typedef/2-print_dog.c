@@ -8,10 +8,8 @@
  */
 void print_dog(struct dog *d)
 {
-	if (d == NULL)
+	if (d != NULL)
 	{
-		return;
-	}
 	char *name =  d->name;
 	float age = d->age;
 	char *owner = d->owner;
@@ -34,4 +32,5 @@ void print_dog(struct dog *d)
 	else
 		printf("%s", owner);
 	printf("\n");
+	}
 }
