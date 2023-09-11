@@ -1,6 +1,5 @@
 #include <stdio.h>
-
-#define ABS(x) ((x < 0)?(-x):(x))
+#include "3-function_like_macro.h"
 
 
 /**
@@ -10,7 +9,7 @@
 */
 int main(void)
 {
-    int c = ABS(98) + 88;
+    int c = ABS(-98) + 1;
 	printf("%d\n", c);
 	return (0);
 }
