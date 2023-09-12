@@ -10,27 +10,27 @@ void print_dog(struct dog *d)
 {
 	if (d != NULL)
 	{
-	char *name =  d->name;
-	float age = d->age;
-	char *owner = d->owner;
+		char *name =  d->name;
+		float age = d->age;
+		char *owner = d->owner;
 
-	printf("Name: ");
-	if (name == ((void *) 0))
-		printf("(nill)");
-	else
-		printf("%s", name);
-	printf("\n");
-	printf("Age: ");
-	if (name == ((void *) 0))
-		printf("(nill)");
-	else
-		printf("%.6f", age);
-	printf("\n");
-	printf("Owner: ");
-	if (name == ((void *) 0))
-		printf("(nill)");
-	else
-		printf("%s", owner);
-	printf("\n");
+		printf("Name: ");
+		if (name == ((void *) 0))
+			printf("(nill)");
+		else
+			printf("%s", name);
+		printf("\n");
+		printf("Age: ");
+		if (name == ((void *) 0))
+			printf("(nill)");
+		else
+			printf("%.6f", age);
+		printf("\n");
+		printf("Owner: ");
+		if (name == ((void *) 0))
+			printf("(nill)");
+		else
+			printf("%s", owner);
+		printf("\n");
 	}
 }
