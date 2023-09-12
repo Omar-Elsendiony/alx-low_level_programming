@@ -21,7 +21,10 @@ void print_dog(struct dog *d)
 			printf("%s", name);
 		printf("\n");
 		printf("Age: ");
-		printf("%.6f", age);
+		if (age <= 0)
+			printf("(nill)");
+		else
+			printf("%.6f", age);
 		printf("\n");
 		printf("Owner: ");
 		if (owner == ((void *) 0))
