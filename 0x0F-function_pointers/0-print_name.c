@@ -1,7 +1,8 @@
-#include "main.h"
-#include "string.h"
+#include "function_pointers.h"
 /**
- * print_alphabet - returns the alphabet
+ * print_name - returns the alphabet
+ * @name: ny
+ * @f: pointer
  * Description: The description
  * Return: 0
 */
