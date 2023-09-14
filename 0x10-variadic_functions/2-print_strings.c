@@ -32,7 +32,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	int number;
 	unsigned int i;
 
-	if (n == 0)
+	if (n <= 0)
 	{
 		return;
 	}
