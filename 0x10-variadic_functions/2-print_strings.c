@@ -29,7 +29,6 @@ void print_seperator(const char *sep)
 void print_strings(const char *separator, const unsigned int n, ...)
 {
 	va_list valist;
-	int number;
 	unsigned int i;
 	char *str;
 
