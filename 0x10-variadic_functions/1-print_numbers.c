@@ -1,7 +1,7 @@
 #include <string.h>
 #include <stdarg.h>
 #include <stdio.h>
-
+#include <stddef.h>
 /**
  * print_seperator - prints buffer in hexa
  * @sep: the address of memory to print

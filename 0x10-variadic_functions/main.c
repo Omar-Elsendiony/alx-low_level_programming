@@ -7,6 +7,6 @@
  */
 int main(void)
 {
-    print_numbers("---", 5, 0, 98, -1024, 0, 1111);
+    print_all("ceis", 'B', 3, NULL);
     return (0);
 }
