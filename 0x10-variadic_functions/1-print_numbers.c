@@ -41,7 +41,7 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	{
 		number = va_arg(valist, int);
 		printf("%d", number);
-		if (i != (n - 1))
+		if (i != (n - 1) && separator != NULL)
 		{
 			print_seperator(separator);
 		}
