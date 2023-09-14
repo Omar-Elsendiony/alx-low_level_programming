@@ -8,12 +8,12 @@
  *
  * Return: Nothing.
  */
-void print_seperator(char *sep)
+void print_seperator(const char *sep)
 {
 	int i;
 
 	i = 0;
-	while (sep[i] != NULL)
+	while (sep[i] != '\0')
 	{
 		printf("%d", sep[i]);
 	}
@@ -33,7 +33,7 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 
 	if (n == 0)
 	{
-		return (0);
+		return;
 	}
 	va_start(valist, n);
 	for (i = 0; i < n; i++)
