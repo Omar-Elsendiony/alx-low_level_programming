@@ -15,7 +15,8 @@ void print_seperator(const char *sep)
 	i = 0;
 	while (sep[i] != '\0')
 	{
-		printf("%d", sep[i]);
+		printf("%c", sep[i]);
+		i++;
 	}
 }
 /**
@@ -45,5 +46,6 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 			print_seperator(separator);
 		}
 	}
+	va_end(valist);
 	printf("\n");
 }
