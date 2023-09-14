@@ -40,7 +40,7 @@ int (*get_op_func(char *s))(int, int)
     i = 0;
     while (i < 6)
     {
-        if (!stringCompare(ops[i].op, s))
+        if (s != NULL && ops[i].op[0] == s[0] && ops[i].op[1] == s[1])
         {
             return (ops[i].f);
         }
