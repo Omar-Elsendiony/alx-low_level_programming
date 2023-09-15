@@ -1,26 +1,7 @@
 #include <string.h>
 #include <stdarg.h>
 #include <stdio.h>
-
-/**
- * getLength - prints buffer in hexa
- * @sep: the address of memory to print
- *
- * Return: Nothing.
- */
-int getLength(const char *sep)
-{
-	int i, length;
-
-	i = 0;
-	length = 0;
-	while (sep[i] != '\0')
-	{
-		length++;
-		i++;
-	}
-	return (length);
-}
+#include <string.h>
 
 /**
  * print_all - prints buffer in hexa
@@ -35,7 +16,7 @@ void print_all(const char * const format, ...)
 	char *str;
 
 	va_start(valist, format);
-	i = 0, length = getLength(format);
+	i = 0, length = strlen(format);
 	while (format != NULL && format[i] != '\0')
 	{
 		tempI = 0;
