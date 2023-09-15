@@ -31,13 +31,14 @@ int getLength(const char *sep)
 void print_all(const char * const format, ...)
 {
 	va_list valist;
-	int i, length;
+	int i, length, tempI;
 	char *str;
 
 	va_start(valist, format);
 	i = 0, length = getLength(format);
 	while (format != NULL && format[i] != '\0')
 	{
+		tempI = 0;
 		switch (format[i])
 		{
 			case ('c'):
@@ -45,10 +46,13 @@ void print_all(const char * const format, ...)
 				break;
 			case ('s'):
 				str = va_arg(valist, char *);
+				while (str == NULL && tempI == 0)
+				{
+					tempI++;
+					printf("(nil)");
+				}
 				if (str != NULL)
 					printf("%s", str);
-				else
-					printf("(nil)");
 				break;
 			case ('f'):
 				printf("%f", va_arg(valist, double));
