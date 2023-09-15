@@ -23,23 +23,6 @@ int getLength(const char *sep)
 }
 
 /**
- * print_seperator - prints buffer in hexa
- * @sep: the address of memory to print
- *
- * Return: Nothing.
- */
-void print_seperator(const char *sep)
-{
-	int i;
-
-	i = 0;
-	while (sep[i] != '\0')
-	{
-		printf("%c", sep[i]);
-		i++;
-	}
-}
-/**
  * print_all - prints buffer in hexa
  * @format: the address of memory to print
  *
