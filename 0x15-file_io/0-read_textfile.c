@@ -11,23 +11,22 @@ ssize_t read_textfile(const char *filename, size_t letters)
 {
 	FILE *myFile;
 	char currentChar;
-	size_t iter;
+	size_t iter = 0;
 	int resWrite;
 
 	if (filename == NULL)
 		return (0);
-	myFile = fopen(filename, O_RDONLY);
+	myFile = fopen(filename, "r");
 	if (myFile == NULL)
 		return (0);
-	while (getc(myFile) != EOF && letters != iter)
+	currentChar = getc(myFile);
+	while (currentChar != EOF && letters != iter)
 	{
-		currentChar = getc(myFile);
 		resWrite = write(1, &currentChar, 1);
 		if (resWrite == -1)
 			return (0);
+		currentChar = getc(myFile);
 		iter++;
 	}
-	if (getc(myFile) == EOF)
-		return (iter - 1);
 	return (iter);
 }
