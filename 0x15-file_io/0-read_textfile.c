@@ -28,7 +28,9 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		iter++;
 	}
 	closeRes = close(fd);
-    if (closeRes == -1)
-        return (-1);
+	if (closeRes == -1)
+	{
+		return (-1);
+	}
 	return (iter);
 }
