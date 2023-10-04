@@ -9,21 +9,20 @@
 */
 int create_file(const char *filename, char *text_content)
 {
-	char currentChar;
 	size_t iter = 0;
-	int fd, resWrite, resRead;
+	int fd, resWrite;
 
 	if (filename == NULL)
-		return (0);
+		return (-1);
 	fd = open(filename, O_RDWR | O_CREAT | O_TRUNC, 600);
 	if (fd == -1)
-		return (0);
-	while (resRead != 0 && resRead != -1  && text_content + iter != '\0')
+		return (-1);
+	while (*(text_content + iter) != '\0')
 	{
-		resWrite = write(1, text_content + iter, 1);
+		resWrite = write(fd, text_content + iter, 1);
 		if (resWrite == -1)
-			return (0);
+			return (-1);
 		iter++;
 	}
-	return (iter);
+	return (1);
 }
