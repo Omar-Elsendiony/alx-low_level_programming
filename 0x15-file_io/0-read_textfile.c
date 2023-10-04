@@ -11,7 +11,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 {
 	char currentChar;
 	size_t iter = 0;
-	int fd, resWrite, resRead;
+	int fd, resWrite, resRead, closeRes;
 
 	if (filename == NULL)
 		return (0);
@@ -27,5 +27,8 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		resRead = read(fd, &currentChar, 1);
 		iter++;
 	}
+	closeRes = close(fd);
+    if (closeRes == -1)
+        return (-1);
 	return (iter);
 }

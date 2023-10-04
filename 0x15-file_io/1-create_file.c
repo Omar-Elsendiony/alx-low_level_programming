@@ -10,7 +10,7 @@
 int create_file(const char *filename, char *text_content)
 {
 	size_t iter = 0;
-	int fd, resWrite;
+	int fd, resWrite, closeRes;
 
 	if (filename == NULL)
 		return (-1);
@@ -24,5 +24,8 @@ int create_file(const char *filename, char *text_content)
 			return (-1);
 		iter++;
 	}
+    closeRes = close(fd);
+    if (closeRes == -1)
+        return (-1);
 	return (1);
 }
