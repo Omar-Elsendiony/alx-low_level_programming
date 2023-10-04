@@ -10,23 +10,21 @@ void display_error(const char* message) {
 }
 
 void display_elf_header(const char* filename) {
+	Elf64_Ehdr elf_header;
+
 	int fd = open(filename, O_RDONLY);
 	if (fd == -1) {
 		display_error("Failed to open the file");
 	}
-
-	Elf64_Ehdr elf_header;
 	if (sizeof(Elf64_Ehdr) != read(fd, &elf_header, sizeof(Elf64_Ehdr))) {
 		display_error("Failed to read the ELF header");
 	}
 
-	// Check if it's a valid ELF file
 	if (elf_header.e_ident[EI_MAG0] != ELFMAG0 || elf_header.e_ident[EI_MAG1] != ELFMAG1 ||
 	elf_header.e_ident[EI_MAG2] != ELFMAG2 || elf_header.e_ident[EI_MAG3] != ELFMAG3) {
 	display_error("Not a valid ELF file");
 	}
 
-	// Display the required information
 	printf("Magic: %02x %02x %02x %02x\n", elf_header.e_ident[EI_MAG0], elf_header.e_ident[EI_MAG1],
 	elf_header.e_ident[EI_MAG2], elf_header.e_ident[EI_MAG3]);
 	printf("Class: %d\n", elf_header.e_ident[EI_CLASS]);
