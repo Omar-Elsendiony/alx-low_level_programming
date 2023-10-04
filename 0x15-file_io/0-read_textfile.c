@@ -22,7 +22,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	while (resRead != 0 && resRead != -1  && letters != iter)
 	{
 		resWrite = write(1, &currentChar, 1);
-		if (resWrite == -1)
+		if (resWrite != 1)
 			return (0);
 		resRead = read(fd, &currentChar, 1);
 		iter++;
