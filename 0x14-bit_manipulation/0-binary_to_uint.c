@@ -1,5 +1,3 @@
-
-
 /**
  * binary_to_uint - writes the character c to stdout
  * @b: The character to print
