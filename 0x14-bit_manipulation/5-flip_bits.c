@@ -16,9 +16,9 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 
 	for (i = 0; i < numberBits; i++)
 	{
-		if ((testBit & n) == (testBit & m))
+		if (!((testBit & n) == (testBit & m)))
 			countFlips += 1;
-		testBit << 1;
+		testBit = testBit << 1;
 	}
 	return (countFlips);
 }
