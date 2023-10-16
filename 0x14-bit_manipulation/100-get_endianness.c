@@ -6,7 +6,7 @@
  */
 int get_endianness(void)
 {
-unsigned int little_endian = 1;
+	unsigned int little_endian = 1;
 	char *big_endian = (char *)&little_endian;
 
 	if (*big_endian)
