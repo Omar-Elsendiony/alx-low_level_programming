@@ -11,7 +11,7 @@
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
 	unsigned long int testBit = 0x01;
-	int i, numberBits = 32;
+	int i, numberBits = 64;
 	unsigned int countFlips = 0;
 
 	for (i = 0; i < numberBits; i++)
